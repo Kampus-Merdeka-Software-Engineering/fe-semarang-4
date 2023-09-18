@@ -1,22 +1,112 @@
-/* For all paragraphs */
-* {
-  font-family: "Jakarta Sans", sans-serif;
+:root {
+  --primary: #e4714b;
+  --bg: #ffffff;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
 }
 
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--bg);
+  color: #000000;
+}
+
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
-  /* align-items: flex-start; */
-  padding-inline: 50px;
-  background-color: white;
-}
-
-.listnav {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.header {
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: #ffffff;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #e47652;
+  text-decoration: none;
+}
+
+.navbar .navbar-nav a {
+  color: #000000;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 1rem;
+  text-decoration-line: none;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scalex(0);
+  transition: 0.2s liniear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #ea8c6d;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+@media (min-width: 769px) {
+  #hamburger-menu {
+    display: none;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #000000;
+    width: 30rem;
+    height: 100vh;
+    transition: right 0.3s; /* Tambahkan transisi agar efek muncul lebih halus */
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
 }
