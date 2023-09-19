@@ -3,7 +3,10 @@
   --bg: #efefef;
 }
 
-html,
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -97,7 +100,13 @@ body {
   display: block;
   position: absolute;
   width: 100%;
-  height: 30%;
+  height: 25%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(238, 238, 238, 1) 8%,
+    rgba(148, 173, 215, 0) 50%
+  );
 }
 
 .hero .content {
@@ -106,18 +115,25 @@ body {
 }
 
 .hero .content h1 {
-  font-size: 2.5em;
+  font-size: 3rem;
   color: #000000;
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content h2 {
+  font-size: 2rem;
+  color: #000000;
+  /* text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5); */
   line-height: 1.2;
 }
 
 .hero .content p {
   font-size: 1.6rem;
   margin-top: 1rem;
-  line-height: 1.4;
-  font-weight: 150;
-  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+  font-weight: 400;
+  /* text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5); */
 }
 
 .hero .content .cta {
@@ -127,7 +143,7 @@ body {
   font-size: 1.4rem;
   color: var(--primary);
   background-color: #efefef;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
 
@@ -151,7 +167,7 @@ body {
 }
 
 .about .row .about-img img {
-  width: 90%;
+  width: 95%;
 }
 
 .about .row .content {
@@ -214,6 +230,13 @@ body {
   text-align: justify;
 }
 
+.values .misi li span {
+  font-size: 1.1xrem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
 /* Catalog Section */
 .catalog {
   padding: 8rem 7% 1.4rem;
@@ -225,7 +248,127 @@ body {
   margin-bottom: 3rem;
 }
 
+/* Contact Section */
+.contact {
+  padding: 4rem 7% 2rem;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.contact .row {
+  display: flex;
+}
+
+.contact .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.contact .row .content h3 {
+  font-size: 1.7rem;
+  margin-bottom: 0.8rem;
+}
+
+.contact .row .content p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  background-color: #E6D9CD;
+  border: 1px solid var(--bg);
+  padding-left: 2rem;
+  border-radius: 0.3rem;
+}
+
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.3rem;
+  background: none;
+}
+
+.contact .row form .input-group-mess textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  background: none;
+  background-color: #E6D9CD;
+  border-radius: 0.3rem;
+  font-family: sans-serif;
+}
+
+.contact .row form .btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.3rem;
+  color: var(--bg);
+  background-color: #000;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #e6d9cd;
+  text-align: center;
+  padding: 1rem 0 1rem;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.footer .socials {
+  padding: 1rem 0;
+}
+
+.footer .socials a {
+  color: #000000;
+  margin: 1rem;
+}
+
+.footer .socials a:hover,
+.footer .links a:hover {
+  color: var(--primary);
+}
+
+.footer .links {
+  margin-bottom: 1.4rem;
+}
+
+.footer .links a {
+  color: #000000;
+  padding: 0.7rem 1rem;
+}
+
+.footer .credit {
+  font-size: 0.8rem;
+  color: #000000;
+}
+
 /* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 85%;
+  }
+}
 
 /* Tablet */
 @media (max-width: 768px) {
@@ -269,12 +412,13 @@ body {
 
   .about .row {
       flex-wrap: wrap;
-      object-fit: cover;
-      object-position: center;
+      /* object-fit: cover;
+      object-position: center; */
   }
 
   .about .row .about-img img {
-      height: 100%;
+      height: 24rem;
+      object-fit: cover;
       object-position: center;
   }
 
@@ -289,6 +433,10 @@ body {
 
   .about .row .content p{
       font-size: 1.3rem;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
   }
 }
 
