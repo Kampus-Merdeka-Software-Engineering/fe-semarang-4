@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
+    <title>Naturu</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,60 +12,122 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,700;1,500;1,700&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,700;1,500;1,700&display=swap"
+        rel="stylesheet" />
 
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
 
     <!-- My Style -->
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Jakarta+Sans:wght@300;400;500;600;700&display=swap"
-    />
-  </head>
-  <body>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Jakarta+Sans:wght@300;400;500;600;700&display=swap" />
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a class="listnav" href="/home/">Naturu</a>
+            <div>
+                <a class="listnav" href="/gallery/">Tentang Kami</a>
+                <a class="listnav" href="/contact/">Katalog</a>
+            </div>
+        </nav>
+    </header>
     <!-- Navbar start -->
     <nav class="navbar">
-      <a href="#" class="navbar-logo">NATURU</a>
+        <a href="#" class="navbar-logo">NATURU</a>
 
-      <div class="navbar-nav">
-        <a href="#home">Beranda</a>
-        <a href="#about">Tentang Kami</a>
-        <a href="#catalog">Katalog</a>
-      </div>
+        <div class="navbar-nav">
+            <a href="#home" id="home-link">Beranda</a>
+            <a href="#about" id="about-link">Tentang Kami</a>
+            <a href="#catalog" id="catalog-link">Katalog</a>
+        </div>
 
-      <div class="navbar-extra">
-        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
-        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
-      </div>
+        <div class="navbar-extra">
+            <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
     </nav>
     <!-- Navbar end -->
 
+    <!-- Hero Section start -->
+    <section class="hero" id="home">
+        <main class="content">
+            <h1>Merancang Gaya, Menyelamatkan Bumi: Mode Berkelanjutan dalam Setiap Kecantikan</h1>
+            <p>
+                Tingkatkan Gaya Anda dengan Mode Berkelanjutan! Temukan koleksi kami yang ramah lingkungan, karena
+                keindahan tidak harus merugikan bumi. Bergabunglah dalam gerakan untuk tampil trendi sambil menjaga
+                planet kita!
+            </p>
+            <a href="#" class="cta">Lihat Katalog Kami
+            </a>
+        </main>
+    </section>
+    <!-- Hero Section end -->
+
+    <!-- About Section start -->
+    <section id="about" class="about">
+        <h2>Tentang Kami</h2>
+        <div class="row">
+            <div class="about-img">
+                <img src="img/bg3.jpg" alt="Tentang Kami">
+            </div>
+
+            <div class="content">
+                <h3>Selamat datang di <span>NATURU</span></h3>
+                <p>Kami lebih dari sebuah brand pakaian, kami berfokus pada kenyamanan, berkualitas tinggi dan berkomitmen pada gaya hidup yang berkelanjutan. Kami percaya pada kekuatan fashion untuk memberikan dampak positif bagi manusia dan planet ini. Misi kami adalah menyediakan produk yang inovatif dan ramah lingkungan yang memungkinkan Anda untuk mengekspresikan gaya unik Anda sambil berkontribusi untuk dunia yang lebih baik.</p>
+            </div>
+        </div>
+    </section>
+    <!-- About Section end -->
+
+    <!-- Our Values start -->
+    <section id="values" class="values">
+        <h2>Tujuan Kami</h2>
+        <!-- <div class="text"> -->
+        <div class="visi">
+            <h3>Visi</h3>
+            <p>Visi kami adalah mampu menjadi merek pilihan utama dalam dunia pakaian di Indonesia. Kami berkomitmen untuk menyediakan produk-produk yang berkualitas tinggi, berkelanjutan, dan memberikan nilai tambah kepada pelanggan kami.</p>
+        </div>
+        <div class="misi">
+            <h3>Misi</h3>
+            <ol>
+                <li><span>Memberikan Produk Berkualitas Tinggi</span>: Kami fokus pada pembuatan pakaian dengan bahan-bahan berkualitas tinggi dan perhatian terhadap detail untuk memastikan bahwa setiap produk kami memberikan kepuasan tertinggi kepada pelanggan kami.</li>
+                <li><span>Menjadi Ramah Lingkungan</span>: Kami berusaha untuk mengurangi dampak lingkungan dengan menggunakan metode produksi yang berkelanjutan, memilih bahan-bahan yang ramah lingkungan, dan meminimalkan limbah.</li>
+                <li><span>Memenuhi Kebutuhan Pelanggan</span>: Kami mendengarkan kebutuhan pelanggan kami dengan cermat dan berusaha untuk memberikan produk-produk yang sesuai dengan gaya hidup dan preferensi mereka.</li>
+            </ol>
+        </div>
+    <!-- </div> -->
+    </section>
+    <!-- Our Values end -->
+
+    <!-- Menu Section start -->
+    <section id="catalog" class="catalog">
+        <h2>Katalog Kami</h2>
+    </section>
+    <!-- Menu Section end -->
+
     <!-- Feather Icons -->
     <script>
-      feather.replace();
+        feather.replace();
     </script>
 
+    <!-- Beranda
+    <section id="home" class="section">
+        <div class="container">
+            <h1>
+            Merancang Gaya, Menyelamatkan Bumi: Mode Berkelanjutan dalam Setiap Kecantikan
+            </h1>
+            <p>
+                Tingkatkan Gaya Anda dengan Mode Berkelanjutan! Temukan koleksi kami yang ramah lingkungan, karena keindahan tidak harus merugikan bumi. Bergabunglah dalam gerakan untuk tampil trendi sambil menjaga planet kita!
+            </p>
+            <a href="#catalog" class="btn-primary">Lihat Katalog Kami
+            </a>
+        </div>
+      </section> -->
+
     <!--My Javascript-->
-    <script src="js/script.js"></script>
-  </body>
-</html>
-
-
-    <p>Mode Peduli Bumi</p>
-    <h1>
-      Merancang Gaya, Menyelamatkan Bumi: Mode Berkelanjutan dalam Setiap
-      Kecantikan
-    </h1>
-    <p>
-      Tingkatkan Gaya Anda dengan Mode Berkelanjutan! Temukan koleksi kami yang
-      ramah lingkungan, karena keindahan tidak harus merugikan bumi.
-      Bergabunglah dalam gerakan untuk tampil trendi sambil menjaga planet kita!
-    </p>
-    <button type="button">Cari disini ya!</button>
-    <button type="button">Lagi Promo!</button>
-  </body>
+    <script src="index.js"></script>
+</body>
 </html>
