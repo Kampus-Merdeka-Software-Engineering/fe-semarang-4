@@ -11,7 +11,7 @@ var prevScrollPos = window.pageYOffset;
 window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
 
-  if (prevScrollPos < currentScrollPos) {
+  if (prevScrollPos > currentScrollPos) {
     // User is scrolling up, show the navbar
     document.querySelector(".navbar").style.top = "0";
   } else {
