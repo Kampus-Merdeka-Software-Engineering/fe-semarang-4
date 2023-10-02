@@ -422,7 +422,7 @@ li {
 }
 
 .footer .our-contact {
-  display: block;
+  display: flex;
   flex-direction: row;
   justify-content: center;
 }
