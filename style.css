@@ -328,6 +328,11 @@ li {
 /* Contact Section */
 .contact {
   padding: 4rem 7% 2rem;
+  background-image: url(img/bg-contact.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
 .contact h2 {
@@ -421,6 +426,12 @@ li {
   width: 100%;
 }
 
+.footer .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
 .footer .our-contact {
   display: block;
   flex-direction: row;
@@ -428,8 +439,10 @@ li {
 }
 
 .footer .our-contact .container {
-  width: 300px;
-  text-align: left;
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+  /* width: 300px;
+  text-align: left; */
 }
 
 .footer .socials {
@@ -761,4 +774,65 @@ li {
   background-color: #e9e1dd;
   padding-top: 5px;
   padding-bottom: 20px;
+}
+
+/* Contact Us Section */
+.contact-us {
+  padding: 4rem 7% 2rem;
+  background-color: #e6d9cd;
+}
+
+.contact-us h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.contact-us .row {
+  display: flex;
+}
+
+.contact-us .row form {
+  flex: 1 1 45rem;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+
+.contact-us .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  background-color: #E6D9CD;
+  border: 1px solid var(--bg);
+  padding-left: 2rem;
+  border-radius: 0.3rem;
+}
+
+.contact-us .row form .input-group input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.3rem;
+  background: none;
+}
+
+.contact-us .row form .input-group-mess textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  background: none;
+  background-color: #E6D9CD;
+  border-radius: 0.3rem;
+  font-family: sans-serif;
+}
+
+.contact-us .row form .btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.3rem;
+  color: #000000;
+  background-color: #e6d9cd;
+  cursor: pointer;
+  border-radius: 0.3rem;
 }
