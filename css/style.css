@@ -877,6 +877,8 @@ li {
 }
 
 .my-cart-container .cart-product img {
+  overflow: hidden;
+  object-fit: cover;
   width: 100px;
   height: 100px;
   margin-right: 1rem;
