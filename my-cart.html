@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <title>Katalog</title>
+  </head>
+  <body style="background-color: #ece1d5">
+    <header class="header">
+      <!-- Navbar start -->
+      <nav class="navbar">
+        <a href="#" class="navbar-logo">
+          <img src="img/Vector.png" alt="logo naturu" width="40" />NATURU</a
+        >
+
+        <div class="navbar-nav">
+          <a href="index.html" id="home-link">Home</a>
+          <a href="about-us.html" id="about-link">About Us</a>
+          <a href="katalog.html" id="catalog-link">Catalog</a>
+          <a href="contact-us.html" id="contact-link">Contact</a>
+        </div>
+
+        <div class="navbar-extra">
+          <a href="#" id="shopping-cart"
+            ><i data-feather="shopping-cart"></i
+          ></a>
+          <a href="my-cart.html" id="hamburger-menu"
+            ><i data-feather="menu"></i
+          ></a>
+        </div>
+      </nav>
+      <!-- Navbar end -->
+    </header>
+
+    <section class="my-cart-container">
+      <br /><br /><br />
+
+      <div class="cart-product-container">
+        <h1 style="text-align: center">My Cart</h1>
+        <div class="cart-product">
+          <img
+            class="cart-image"
+            src="../img/Product1.png"
+            alt="Product Image"
+          />
+          <div class="item-details">
+            <h2
+              class="my-cart-product-name"
+              style="margin-bottom: 0.4rem; margin-top: 0"
+            >
+              Product Name
+            </h2>
+            <p class="my-cart-price">$19.99</p>
+            <p class="Quantity">2</p>
+          </div>
+
+          <button class="remove-item">Remove</button>
+        </div>
+      </div>
+
+      <br /><br />
+
+      <div class="cart-summary" style="text-align: center">
+        <h1>Cart Summary</h1>
+        <p>Total Items: 3</p>
+        <p>Total Price: $59.97</p>
+        <button class="checkout-button">Checkout</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+        <a href="#"><i data-feather="mail"></i></a>
+      </div>
+
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="katalog.html">Catalog</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="credit">
+        <p>Copyright &copy; 2023 NATURU. All rights reserved</p>
+      </div>
+    </footer>
+    <script>
+      feather.replace();
+    </script>
+    <!--My Javascript-->
+    <script src="./js/index.js"></script>
+  </body>
+</html>

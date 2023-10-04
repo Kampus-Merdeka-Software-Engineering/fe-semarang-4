@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap"
@@ -32,7 +32,7 @@
         </div>
 
         <div class="navbar-extra">
-          <a href="#" id="shopping-cart"
+          <a href="my-cart.html" id="shopping-cart"
             ><i data-feather="shopping-cart"></i
           ></a>
           <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
@@ -42,6 +42,7 @@
     </header>
 
     <section class="catalog-container">
+      <br /><br /><br />
       <h1>Product Catalog</h1>
       <div class="catalog-type-title">
         <h1>Best Sellers</h1>
@@ -65,375 +66,48 @@
           </div>
         </div>
       </div>
-      <!-- Segment 2 -->
-      <br />
+
       <div class="catalog-type-title">
-        <h1>Special Discounted Items</h1>
+        <h1>New Arrival</h1>
         <a href="" id="view-all">VIEW ALL></a>
       </div>
-      <div class="product-container">
-        <div class="product">
-          <div class="image-biasa">
-            <img
-              src="img/product1.jpeg"
-              alt="gambar pertama"
-              class="first-image"
-            />
+      <div class="product-container" id="product-container-new-arrival">
+        <div class="product" style="display: none">
+          <div class="image">
+            <img src="" alt="gambar pertama" class="first-image" />
+            <img src="" alt="gambar kedua" class="second-image" />
           </div>
           <div class="info">
             <div class="highlight">
-              <div class="catalog-collection">New Arrival</div>
-              <div class="catalog-discount">50%</div>
+              <div class="catalog-collection"></div>
+              <div class="catalog-discount" style="display: none"></div>
             </div>
-            <h2>Verde Tranquility Women's Tank Top</h2>
-            <p class="price">Rp 120.000,00</p>
-            <p>
-              Tank top wanita ini menggabungkan etika dan kenyamanan. Warna
-              verde yang menenangkan menambahkan sentuhan keindahan alami.
-            </p>
-            <a href="" class="add-to-cart">Add To Cart</a>
-          </div>
-        </div>
-
-        <div class="product">
-          <div class="image-biasa">
-            <img
-              src="img/product2.jpeg"
-              alt="gambar pertama"
-              class="first-image"
-            />
-          </div>
-          <div class="info">
-            <div class="highlight">
-              <div class="catalog-collection">Collab with @Hijauku</div>
-              <div class="catalog-discount">70%</div>
-            </div>
-            <h2>Army-Green Candy Buttoned Blouse</h2>
-            <p class="price">Rp 59.000,00</p>
-            <p>
-              Blus wanita ini mencerminkan ketenangan dan kepedulian pada
-              lingkungan. Warna ivorynya yang lembut cocok untuk tampilan kantor
-              yang rapi.
-            </p>
-            <a href="" class="add-to-cart">Add To Cart</a>
-          </div>
-        </div>
-
-        <div class="product">
-          <div class="image-biasa">
-            <img
-              src="img/product3.jpg"
-              alt="gambar pertama"
-              class="first-image"
-            />
-          </div>
-          <div class="info">
-            <div class="highlight">
-              <div class="catalog-collection">Spring 2023</div>
-              <div class="catalog-discount">50%</div>
-            </div>
-            <h2>Ivory Crinkle Elegance Casual Shirt</h2>
-            <p class="price">Rp 154.900,00</p>
-            <p>
-              Gaun putih ini adalah perwujudan keindahan sederhana dan ramah
-              lingkungan. Dibuat dari bahan organik, gaun ini nyaman dan elegan.
-            </p>
-            <a href="" class="add-to-cart">Add To Cart</a>
-          </div>
-        </div>
-
-        <div class="product">
-          <div class="image-biasa">
-            <img
-              src="img/product4.jpg"
-              alt="gambar pertama"
-              class="first-image"
-            />
-          </div>
-          <div class="info">
-            <div class="highlight">
-              <div class="catalog-collection">Spring 2023</div>
-              <div class="catalog-discount">30%</div>
-            </div>
-            <h2>Ivory Crinkle Elegance Long Midi Skirt</h2>
-            <p class="price">Rp 129.000,00</p>
-            <p>
-              Jas pria ini adalah simbol kesopanan dan kesadaran lingkungan.
-              Dengan desain klasiknya, ia menawarkan kenyamanan sepanjang hari.
-            </p>
+            <h2 class="product-name"></h2>
+            <p class="price"></p>
+            <p class="product-desc"></p>
             <a href="" class="add-to-cart">Add To Cart</a>
           </div>
         </div>
       </div>
 
-      <!-- Segment 3 -->
-      <br />
       <div class="catalog-type-title">
-        <h1>Our Products</h1>
+        <h1>Other Products</h1>
         <a href="" id="view-all">VIEW ALL></a>
       </div>
-      <div class="product-container">
-        <div class="product">
-          <div class="image-biasa">
-            <img
-              src="img/product5.jpg"
-              alt="gambar pertama"
-              class="first-image"
-            />
+      <div class="product-container" id="product-container-reguler">
+        <div class="product" style="display: none">
+          <div class="image">
+            <img src="" alt="gambar pertama" class="first-image" />
+            <img src="" alt="gambar kedua" class="second-image" />
           </div>
           <div class="info">
             <div class="highlight">
-              <div class="catalog-collection">New Arrival</div>
+              <div class="catalog-collection"></div>
+              <div class="catalog-discount" style="display: none"></div>
             </div>
-            <h2>Verde Tranquility Women's Tank Top</h2>
-            <p class="price">Rp 120.000,00</p>
-            <p>
-              Tank top wanita ini menggabungkan etika dan kenyamanan. Warna
-              verde yang menenangkan menambahkan sentuhan keindahan alami.
-            </p>
-            <a href="" class="add-to-cart">Add To Cart</a>
-          </div>
-        </div>
-
-        <div class="product">
-          <div class="image-biasa">
-            <img
-              src="img/product5.jpg"
-              alt="gambar pertama"
-              class="first-image"
-            />
-          </div>
-          <div class="info">
-            <div class="highlight">
-              <div class="catalog-collection">New Arrival</div>
-            </div>
-            <h2>Ivory Zenith Women's Eco-Office Blouse</h2>
-            <p class="price">Rp 299.000,00</p>
-            <p>
-              Blus wanita ini mencerminkan ketenangan dan kepedulian pada
-              lingkungan. Warna ivorynya yang lembut cocok untuk tampilan kantor
-              yang rapi.
-            </p>
-            <a href="" class="add-to-cart">Add To Cart</a>
-          </div>
-        </div>
-
-        <div class="product">
-          <div class="image-biasa">
-            <img
-              src="img/product5.jpg"
-              alt="gambar pertama"
-              class="first-image"
-            />
-          </div>
-          <div class="info">
-            <div class="highlight">
-              <div class="catalog-collection">New Arrival</div>
-            </div>
-            <h2>Blossom Breeze Organic White Dress</h2>
-            <p class="price">Rp 299.000,00</p>
-            <p>
-              Gaun putih ini adalah perwujudan keindahan sederhana dan ramah
-              lingkungan. Dibuat dari bahan organik, gaun ini nyaman dan elegan.
-            </p>
-            <a href="" class="add-to-cart">Add To Cart</a>
-          </div>
-        </div>
-
-        <div class="product">
-          <div class="image-biasa">
-            <img
-              src="img/product5.jpg"
-              alt="gambar pertama"
-              class="first-image"
-            />
-          </div>
-          <div class="info">
-            <div class="highlight">
-              <div class="catalog-collection">New Arrival</div>
-            </div>
-            <h2>Men's Classic Elegance Office Shirts</h2>
-            <p class="price">Rp 299.000,00</p>
-            <p>
-              Jas pria ini adalah simbol kesopanan dan kesadaran lingkungan.
-              Dengan desain klasiknya, ia menawarkan kenyamanan sepanjang hari.
-            </p>
-            <a href="" class="add-to-cart">Add To Cart</a>
-          </div>
-        </div>
-
-        <div class="product">
-          <div class="image-biasa">
-            <img
-              src="img/product5.jpg"
-              alt="gambar pertama"
-              class="first-image"
-            />
-          </div>
-          <div class="info">
-            <div class="highlight">
-              <div class="catalog-collection">Fall 2023 Collection</div>
-            </div>
-            <h2>Men's Classic Elegance Office Shirts</h2>
-            <p class="price">Rp 299.000,00</p>
-            <p>
-              Jas pria ini adalah simbol kesopanan dan kesadaran lingkungan.
-              Dengan desain klasiknya, ia menawarkan kenyamanan sepanjang hari.
-            </p>
-            <a href="" class="add-to-cart">Add To Cart</a>
-          </div>
-        </div>
-
-        <div class="product">
-          <div class="image-biasa">
-            <img
-              src="img/product5.jpg"
-              alt="gambar pertama"
-              class="first-image"
-            />
-          </div>
-          <div class="info">
-            <div class="highlight">
-              <div class="catalog-collection">Fall 2023 Collection</div>
-            </div>
-            <h2>Men's Classic Elegance Office Shirts</h2>
-            <p class="price">Rp 299.000,00</p>
-            <p>
-              Jas pria ini adalah simbol kesopanan dan kesadaran lingkungan.
-              Dengan desain klasiknya, ia menawarkan kenyamanan sepanjang hari.
-            </p>
-            <a href="" class="add-to-cart">Add To Cart</a>
-          </div>
-        </div>
-
-        <div class="product">
-          <div class="image-biasa">
-            <img
-              src="img/product5.jpg"
-              alt="gambar pertama"
-              class="first-image"
-            />
-          </div>
-          <div class="info">
-            <div class="highlight">
-              <div class="catalog-collection">Fall 2023 Collection</div>
-            </div>
-            <h2>Men's Classic Elegance Office Shirts</h2>
-            <p class="price">Rp 299.000,00</p>
-            <p>
-              Jas pria ini adalah simbol kesopanan dan kesadaran lingkungan.
-              Dengan desain klasiknya, ia menawarkan kenyamanan sepanjang hari.
-            </p>
-            <a href="" class="add-to-cart">Add To Cart</a>
-          </div>
-        </div>
-
-        <div class="product">
-          <div class="image-biasa">
-            <img
-              src="img/product5.jpg"
-              alt="gambar pertama"
-              class="first-image"
-            />
-          </div>
-          <div class="info">
-            <div class="highlight">
-              <div class="catalog-collection">Fall 2023 Collection</div>
-            </div>
-            <h2>Men's Classic Elegance Office Shirts</h2>
-            <p class="price">Rp 299.000,00</p>
-            <p>
-              Jas pria ini adalah simbol kesopanan dan kesadaran lingkungan.
-              Dengan desain klasiknya, ia menawarkan kenyamanan sepanjang hari.
-            </p>
-            <a href="" class="add-to-cart">Add To Cart</a>
-          </div>
-        </div>
-
-        <div class="product">
-          <div class="image-biasa">
-            <img
-              src="img/product5.jpg"
-              alt="gambar pertama"
-              class="first-image"
-            />
-          </div>
-          <div class="info">
-            <div class="highlight">
-              <div class="catalog-collection">New Arrival</div>
-            </div>
-            <h2>Men's Classic Elegance Office Shirts</h2>
-            <p class="price">Rp 299.000,00</p>
-            <p>
-              Jas pria ini adalah simbol kesopanan dan kesadaran lingkungan.
-              Dengan desain klasiknya, ia menawarkan kenyamanan sepanjang hari.
-            </p>
-            <a href="" class="add-to-cart">Add To Cart</a>
-          </div>
-        </div>
-
-        <div class="product">
-          <div class="image-biasa">
-            <img
-              src="img/product5.jpg"
-              alt="gambar pertama"
-              class="first-image"
-            />
-          </div>
-          <div class="info">
-            <div class="highlight">
-              <div class="catalog-collection">Collab with @Hijauku</div>
-            </div>
-            <h2>Men's Classic Elegance Office Shirts</h2>
-            <p class="price">Rp 299.000,00</p>
-            <p>
-              Jas pria ini adalah simbol kesopanan dan kesadaran lingkungan.
-              Dengan desain klasiknya, ia menawarkan kenyamanan sepanjang hari.
-            </p>
-            <a href="" class="add-to-cart">Add To Cart</a>
-          </div>
-        </div>
-
-        <div class="product">
-          <div class="image-biasa">
-            <img
-              src="img/product5.jpg"
-              alt="gambar pertama"
-              class="first-image"
-            />
-          </div>
-          <div class="info">
-            <div class="highlight">
-              <div class="catalog-collection">Collab with @Hijauku</div>
-            </div>
-            <h2>Men's Classic Elegance Office Shirts</h2>
-            <p class="price">Rp 299.000,00</p>
-            <p>
-              Jas pria ini adalah simbol kesopanan dan kesadaran lingkungan.
-              Dengan desain klasiknya, ia menawarkan kenyamanan sepanjang hari.
-            </p>
-            <a href="" class="add-to-cart">Add To Cart</a>
-          </div>
-        </div>
-
-        <div class="product">
-          <div class="image-biasa">
-            <img
-              src="img/product5.jpg"
-              alt="gambar pertama"
-              class="first-image"
-            />
-          </div>
-          <div class="info">
-            <div class="highlight">
-              <div class="catalog-collection">New Arrival</div>
-            </div>
-            <h2>Men's Classic Elegance Office Shirts</h2>
-            <p class="price">Rp 299.000,00</p>
-            <p>
-              Jas pria ini adalah simbol kesopanan dan kesadaran lingkungan.
-              Dengan desain klasiknya, ia menawarkan kenyamanan sepanjang hari.
-            </p>
+            <h2 class="product-name"></h2>
+            <p class="price"></p>
+            <p class="product-desc"></p>
             <a href="" class="add-to-cart">Add To Cart</a>
           </div>
         </div>
@@ -458,12 +132,10 @@
         <p>Copyright &copy; 2023 NATURU. All rights reserved</p>
       </div>
     </footer>
-  </body>
-  <footer>
     <script>
       feather.replace();
     </script>
     <!--My Javascript-->
-    <script src="index.js"></script>
-  </footer>
+    <script src="./js/index.js"></script>
+  </body>
 </html>
