@@ -61,6 +61,42 @@ document.addEventListener("DOMContentLoaded", () => {
             ".add-to-cart"
           ).href = `${apiAddCart}${product.id}`; // Set the appropriate href blm bisa
 
+          productElement
+            .querySelector(".add-to-cart")
+            .addEventListener("click", (event) => {
+              event.preventDefault();
+
+              if (product.id) {
+                const jsonData = {
+                  productId: product.id,
+                  // Other product data if needed
+                };
+
+                fetch("http://localhost:3000/mycart", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(jsonData),
+                })
+                  .then((response) => {
+                    if (response.ok) {
+                      // Item added to cart successfully
+                      alert(`${product.product_name} added to cart!`);
+                    } else {
+                      // Handle error if the item couldn't be added to cart
+                      console.error(
+                        "Error adding item to cart:",
+                        response.statusText
+                      );
+                    }
+                  })
+                  .catch((error) => {
+                    console.error("Error adding item to cart:", error);
+                  });
+              }
+            });
+
           productList.appendChild(productElement);
         }
       });
