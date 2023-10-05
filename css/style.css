@@ -799,7 +799,7 @@ li {
 /* Contact Us Section */
 .contact-us {
   padding: 4rem 7% 2rem;
-  background-color: #e6d9cd;
+  background-color: var(--bg);
 }
 
 .contact-us h2 {
