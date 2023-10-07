@@ -1,117 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+<head>
+  <style>
+    .alert-success {
+      background-color: #4caf50;
+      /* Green background color */
+      color: white;
+      /* White text color */
+      padding: 10px;
+      /* Padding to create space around the message */
+      margin-top: 10px;
+      /* Margin to separate it from the form */
+      text-align: center;
+      /* Center-align the text */
+    }
+  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,700;1,500;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap"
-    />
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
 
-    <!-- Feather Icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,700;1,500;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" />
 
-    <!-- My Style -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Jakarta+Sans:wght@300;400;500;600;700&display=swap"
-    />
-  </head>
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
 
-  <body>
-    <header>
-      <nav class="navbar">
-        <a href="#" class="navbar-logo">
-          <img src="img/Vector.png" alt="logo naturu" width="40" />NATURU</a
-        >
+  <!-- My Style -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Jakarta+Sans:wght@300;400;500;600;700&display=swap" />
+</head>
 
-        <div class="navbar-nav">
-          <a href="index.html" id="home-link">Home</a>
-          <a href="about-us.html" id="about-link">About Us</a>
-          <a href="katalog.html" id="catalog-link">Catalog</a>
-          <a href="contact-us.html" id="contact-link">Contact</a>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">
+        <img src="img/Vector.png" alt="logo naturu" width="40" />NATURU</a>
+
+      <div class="navbar-nav">
+        <a href="index.html" id="home-link">Home</a>
+        <a href="about-us.html" id="about-link">About Us</a>
+        <a href="katalog.html" id="catalog-link">Catalog</a>
+        <a href="contact-us.html" id="contact-link">Contact</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="my-cart.html" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+  </header>
+
+  <section id="contact" class="contact-us">
+    <h2>Contact Us</h2>
+    <div class="contact-p" style="text-align: center">
+      <p>Get in touch with us for the enquiries you have</p>
+    </div>
+    <div class="row">
+      <div class="content">
+        <h3>Address</h3>
+        <p>
+          The Plaza Office Tower <br />
+          Jl. M.H. Thamrin No.Kav. 28-30, RT.9/RW.5, Gondangdia, Kec. Menteng,
+          Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10350
+        </p>
+        <h3>Phone</h3>
+        <p>0812 5566 7788</p>
+        <h3>Email</h3>
+        <p>contact@naturu.com</p>
+      </div>
+
+      <div id="success-message"></div>
+      <form action="http://localhost:3000/contact" method="post" autocomplete="off" id="contact-form">
+        <div class="input-group">
+          <i data-feather="user"></i>
+          <input type="text" placeholder="Name" required name="name" />
         </div>
-
-        <div class="navbar-extra">
-          <a href="my-cart.html" id="shopping-cart"
-            ><i data-feather="shopping-cart"></i
-          ></a>
-          <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        <div class="input-group">
+          <i data-feather="mail"></i>
+          <input type="email" placeholder="Email" name="email" required />
         </div>
-      </nav>
-    </header>
-
-    <section id="contact" class="contact-us">
-      <h2>Contact Us</h2>
-      <div class="contact-p" style="text-align: center">
-        <p>Get in touch with us for the enquiries you have</p>
-      </div>
-      <div class="row">
-        <div class="content">
-          <h3>Address</h3>
-          <p>
-            The Plaza Office Tower <br />
-            Jl. M.H. Thamrin No.Kav. 28-30, RT.9/RW.5, Gondangdia, Kec. Menteng,
-            Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10350
-          </p>
-          <h3>Phone</h3>
-          <p>0812 5566 7788</p>
-          <h3>Email</h3>
-          <p>contact@naturu.com</p>
+        <div class="input-group-mess">
+          <textarea rows="5" placeholder="Message" name="message" required></textarea>
         </div>
+        <button type="submit" class="cta">Send</button>
+      </form>
 
-        <form action="" method="post" autocomplete="off">
-          <div class="input-group">
-            <i data-feather="user"></i>
-            <input type="text" placeholder="Name" required />
-          </div>
-          <div class="input-group">
-            <i data-feather="mail"></i>
-            <input type="email" placeholder="Email" required />
-          </div>
-          <div class="input-group-mess">
-            <textarea rows="5" placeholder="Message" required></textarea>
-          </div>
-          <button type="submit" class="cta">Send</button>
-        </form>
-      </div>
-    </section>
-    <footer class="footer">
-      <div class="socials">
-        <a href="#"><i data-feather="instagram"></i></a>
-        <a href="#"><i data-feather="twitter"></i></a>
-        <a href="#"><i data-feather="facebook"></i></a>
-        <a href="#"><i data-feather="mail"></i></a>
-      </div>
+      <!-- Empty div for success message -->
+ 
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="socials">
+      <a href="#"><i data-feather="instagram"></i></a>
+      <a href="#"><i data-feather="twitter"></i></a>
+      <a href="#"><i data-feather="facebook"></i></a>
+      <a href="#"><i data-feather="mail"></i></a>
+    </div>
 
-      <div class="links">
-        <a href="index.html">Home</a>
-        <a href="about-us.html">About Us</a>
-        <a href="katalog.html">Catalog</a>
-        <a href="contact-us.html">Contact</a>
-      </div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="about-us.html">About Us</a>
+      <a href="katalog.html">Catalog</a>
+      <a href="contact-us.html">Contact</a>
+    </div>
 
-      <div class="credit">
-        <p>Copyright &copy; 2023 NATURU. All rights reserved</p>
-      </div>
-    </footer>
-    <script>
-      feather.replace();
-    </script>
-    <!--My Javascript-->
-    <script src="./js/index.js"></script>
-  </body>
+    <div class="credit">
+      <p>Copyright &copy; 2023 NATURU. All rights reserved</p>
+    </div>
+  </footer>
+  <script>
+    feather.replace();
+
+    function showSuccessMessage() {
+      const successMessage = document.getElementById('success-message');
+      successMessage.innerHTML = '<div class="alert alert-success">Message sent successfully!</div>';
+    }
+
+    const contactForm = document.querySelector('form');
+
+    contactForm.addEventListener('submit', async (event) => {
+      document.getElementById('success-message').style.display = 'none';
+      document.getElementsByClassName("cta")[0].disabled = true;
+      document.getElementsByClassName("cta")[0].innerHTML = "Loading ..."
+      event.preventDefault();
+
+      const email = document.getElementsByName("email")[0].value;
+      const message = document.getElementsByName("message")[0].value;
+      const name = document.getElementsByName("name")[0].value;
+      var p = {
+        name: name,
+        email: email,
+        message: message
+      }
+      //console.log(p.toString())
+      try {
+        const response = await fetch("http://localhost:3000/contact", {
+          method: "POST",
+          body: JSON.stringify(p),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+
+        if (response.ok) {
+          showSuccessMessage();
+        } else {
+          // Handle the error case here
+          console.error('Failed to submit the form');
+        }
+      } catch (error) {
+        console.error('Error submitting the form:', error);
+      }
+      document.getElementsByClassName("cta")[0].disabled = false;
+      document.getElementsByClassName("cta")[0].innerHTML = "Send"
+      document.getElementById('success-message').style.display = 'block';
+
+    });
+  </script>
+</body>
+
 </html>
