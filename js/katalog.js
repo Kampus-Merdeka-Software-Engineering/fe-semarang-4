@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const productTemplate = document.querySelector(".product");
 
   // Define the URL of your backend API
-  const apiUrl = "http://localhost:3000/products"; // Replace with your API URL
-  const apiAddCart = "http://localhost:3000/mycart"; // Replace with your API URL
+  const apiUrl = "https://be-semarang-4-production.up.railway.app/products"; // Replace with your API URL
+  const apiAddCart = "https://be-semarang-4-production.up.railway.app/mycart"; // Replace with your API URL
 
   // Function to fetch and display products
   async function fetchProducts(type = "best-seller", typeid = ".best-seller") {
@@ -72,13 +72,16 @@ document.addEventListener("DOMContentLoaded", () => {
                   // Other product data if needed
                 };
 
-                fetch("http://localhost:3000/mycart", {
-                  method: "POST",
-                  headers: {
-                    "Content-Type": "application/json",
-                  },
-                  body: JSON.stringify(jsonData),
-                })
+                fetch(
+                  "https://be-semarang-4-production.up.railway.app/mycart",
+                  {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(jsonData),
+                  }
+                )
                   .then((response) => {
                     if (response.ok) {
                       // Item added to cart successfully

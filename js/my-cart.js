@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const productTemplate = document.querySelector(".cart-product");
 
   // Define the URL of your backend API
-  const apiUrl = "http://localhost:3000/mycart"; // Replace with your API URL
+  const apiUrl = "https://be-semarang-4-production.up.railway.app/mycart"; // Replace with your API URL
 
   // Function to fetch and display products
   async function fetchProducts() {
