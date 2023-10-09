@@ -173,6 +173,24 @@ li {
   cursor: pointer;
 }
 
+.cta-contact {
+  border: none;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  color: #ffffff;
+  background-color: var(--primary);
+  text-decoration: none;
+}
+
+.cta-contact:hover {
+  color: #fcd8cf;
+  background-color: #be6c43;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
 /* About Section */
 .about {
   padding: 4rem 7% 2rem;

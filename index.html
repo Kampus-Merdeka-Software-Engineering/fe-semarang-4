@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      .alert-success {
+        background-color: #4caf50;
+        /* Green background color */
+        color: white;
+        /* White text color */
+        padding: 10px;
+        /* Padding to create space around the message */
+        margin-top: 10px;
+        /* Margin to separate it from the form */
+        text-align: center;
+        /* Center-align the text */
+      }
+    </style>
     <title>Naturu</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -229,25 +243,26 @@
     <!-- Menu Section end -->
 
     <!-- Contact Section Start -->
+    <div id="success-message"></div>
     <section id="contact" class="contact">
       <h2>Contact Us</h2>
       <div class="contact-p" style="text-align: center">
         <p>Get in touch with us for the enquiries you have</p>
       </div>
       <div class="row">
-        <form action="" method="post" autocomplete="off">
+        <form action="https://be-semarang-4-production.up.railway.app/contact" method="post" autocomplete="off">
           <div class="input-group">
             <i data-feather="user"></i>
-            <input type="text" placeholder="Name" required />
+            <input type="text" placeholder="Name" required name="name" />
           </div>
           <div class="input-group">
             <i data-feather="mail"></i>
-            <input type="email" placeholder="Email" required />
+            <input type="email" placeholder="Email" required name="email" />
           </div>
           <div class="input-group-mess">
-            <textarea rows="5" placeholder="Message" required></textarea>
+            <textarea rows="5" placeholder="Message" required name="message" ></textarea>
           </div>
-          <button type="submit" class="cta">Send</button>
+          <button type="submit" class="cta-contact">Send</button>
         </form>
       </div>
     </section>
@@ -299,7 +314,53 @@
       </div>
     </footer>
     <script>
-      feather.replace();
+    feather.replace();
+
+    function showSuccessMessage() {
+      const successMessage = document.getElementById('success-message');
+      successMessage.innerHTML = '<div class="alert alert-success">Message sent successfully!</div>';
+    }
+
+    const contactForm = document.querySelector('form');
+
+    contactForm.addEventListener('submit', async (event) => {
+      document.getElementById('success-message').style.display = 'none';
+      document.getElementsByClassName("cta-contact")[0].disabled = true;
+      document.getElementsByClassName("cta-contact")[0].innerHTML = "Loading ..."
+      event.preventDefault();
+
+      const email = document.getElementsByName("email")[0].value;
+      const message = document.getElementsByName("message")[0].value;
+      const name = document.getElementsByName("name")[0].value;
+      var p = {
+        name: name,
+        email: email,
+        message: message
+      }
+      //console.log(p.toString())
+      try {
+        const response = await fetch("https://be-semarang-4-production.up.railway.app/contact", {
+          method: "POST",
+          body: JSON.stringify(p),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+
+        if (response.ok) {
+          showSuccessMessage();
+        } else {
+          // Handle the error case here
+          console.error('Failed to submit the form');
+        }
+      } catch (error) {
+        console.error('Error submitting the form:', error);
+      }
+      document.getElementsByClassName("cta-contact")[0].disabled = false;
+      document.getElementsByClassName("cta-contact")[0].innerHTML = "Send"
+      document.getElementById('success-message').style.display = 'block';
+
+    });
     </script>
     <!--My Javascript-->
     <script src="./js/index.js"></script>
