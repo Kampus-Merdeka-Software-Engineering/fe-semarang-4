@@ -80,7 +80,7 @@
       </div>
 
       <div id="success-message"></div>
-      <form action="http://localhost:3000/contact" method="post" autocomplete="off" id="contact-form">
+      <form action="https://be-semarang-4-production.up.railway.app/contact" method="post" autocomplete="off" id="contact-form">
         <div class="input-group">
           <i data-feather="user"></i>
           <input type="text" placeholder="Name" required name="name" />
@@ -144,7 +144,7 @@
       }
       //console.log(p.toString())
       try {
-        const response = await fetch("http://localhost:3000/contact", {
+        const response = await fetch("https://be-semarang-4-production.up.railway.app/contact", {
           method: "POST",
           body: JSON.stringify(p),
           headers: {
