@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const products = await response.json();
 
       // Clear any existing products in the list
-      productList.innerHTML = "";
 
       // Loop through the products and create product elements
       products.forEach((product) => {
@@ -47,7 +46,28 @@ document.addEventListener("DOMContentLoaded", () => {
         totalPrice += product.itemPrice;
         console.log(totalPrice);
 
-        //delete button blm bisa, aku mau tidur pleasee
+        //Delete button
+        productElement
+          .querySelector(".remove-item")
+          .addEventListener("click", async () => {
+            try {
+              // Send a DELETE request to your server to delete the item
+              const response = await fetch(`${apiUrl}/${product.itemID}`, {
+                method: "DELETE",
+              });
+
+              if (response.ok) {
+                // Item deleted successfully
+                // Remove the cart product element from the DOM
+                productElement.remove();
+              } else {
+                // Handle error if the item could not be deleted
+                console.error("Error deleting item from cart");
+              }
+            } catch (error) {
+              console.error("Error deleting item from cart:", error);
+            }
+          });
 
         productList.appendChild(productElement);
       });
@@ -64,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ).textContent = `Total Item: ${totalItem}`;
     document.querySelector(
       ".total-price"
-    ).textContent = `Toteal Price: ${totalPrice}`;
+    ).textContent = `Total Price: Rp ${totalPrice}, 00`;
   }
 
   // Fetch and display products when the page loads
