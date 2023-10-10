@@ -15,6 +15,7 @@
         /* Center-align the text */
       }
     </style>
+
     <title>Naturu</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -45,6 +46,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Jakarta+Sans:wght@300;400;500;600;700&display=swap"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -72,7 +74,7 @@
 
     <!-- Hero Section start -->
     <section class="hero" id="home">
-      <main class="content">
+      <main class="content" data-aos="fade-up" data-aos-duration="2000">
         <h1 style="color: #244942; font-weight: normal">
           Styling with Care, Earth's Beauty to Share: Sustainable Fashion
           Everywhere
@@ -88,7 +90,12 @@
     <!-- Hero Section end -->
 
     <!-- About Section start -->
-    <section id="about" class="about">
+    <section
+      id="about"
+      class="about"
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    >
       <h2>About Us</h2>
       <div class="row">
         <div class="about-img">
@@ -112,7 +119,12 @@
     <!-- About Section end -->
 
     <!-- Our Values start -->
-    <section id="values" class="values">
+    <section
+      id="values"
+      class="values"
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    >
       <h2>Our Values</h2>
       <!-- <div class="text"> -->
       <div class="visi">
@@ -159,7 +171,7 @@
         expression.
       </p>
       <div class="gallery">
-        <div class="image">
+        <div class="image" data-aos="fade-up" data-aos-duration="2000">
           <img
             src="img/product6.jpg"
             alt="gambar pertama"
@@ -171,7 +183,7 @@
             class="second-image"
           />
         </div>
-        <div class="image">
+        <div class="image" data-aos="fade-up" data-aos-duration="2000">
           <img
             src="img/product7.jpg"
             alt="gambar pertama"
@@ -184,7 +196,7 @@
           />
         </div>
 
-        <div class="image">
+        <div class="image" data-aos="fade-up" data-aos-duration="2000">
           <img
             src="img/product8.jpg"
             alt="gambar pertama"
@@ -197,7 +209,7 @@
           />
         </div>
 
-        <div class="image">
+        <div class="image" data-aos="fade-up" data-aos-duration="2000">
           <img
             src="img/product9.jpg"
             alt="gambar pertama"
@@ -210,7 +222,7 @@
           />
         </div>
 
-        <div class="image">
+        <div class="image" data-aos="fade-up" data-aos-duration="2000">
           <img
             src="img/product10.jpg"
             alt="gambar pertama"
@@ -223,7 +235,7 @@
           />
         </div>
 
-        <div class="image">
+        <div class="image" data-aos="fade-up" data-aos-duration="2000">
           <img
             src="img/product11.jpg"
             alt="gambar pertama"
@@ -244,13 +256,22 @@
 
     <!-- Contact Section Start -->
     <div id="success-message"></div>
-    <section id="contact" class="contact">
+    <section
+      id="contact"
+      class="contact"
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    >
       <h2>Contact Us</h2>
       <div class="contact-p" style="text-align: center">
         <p>Get in touch with us for the enquiries you have</p>
       </div>
       <div class="row">
-        <form action="https://be-semarang-4-production.up.railway.app/contact" method="post" autocomplete="off">
+        <form
+          action="https://be-semarang-4-production.up.railway.app/contact"
+          method="post"
+          autocomplete="off"
+        >
           <div class="input-group">
             <i data-feather="user"></i>
             <input type="text" placeholder="Name" required name="name" />
@@ -260,7 +281,12 @@
             <input type="email" placeholder="Email" required name="email" />
           </div>
           <div class="input-group-mess">
-            <textarea rows="5" placeholder="Message" required name="message" ></textarea>
+            <textarea
+              rows="5"
+              placeholder="Message"
+              required
+              name="message"
+            ></textarea>
           </div>
           <button type="submit" class="cta-contact">Send</button>
         </form>
@@ -314,55 +340,63 @@
       </div>
     </footer>
     <script>
-    feather.replace();
+      feather.replace();
 
-    function showSuccessMessage() {
-      const successMessage = document.getElementById('success-message');
-      successMessage.innerHTML = '<div class="alert alert-success">Message sent successfully!</div>';
-    }
-
-    const contactForm = document.querySelector('form');
-
-    contactForm.addEventListener('submit', async (event) => {
-      document.getElementById('success-message').style.display = 'none';
-      document.getElementsByClassName("cta-contact")[0].disabled = true;
-      document.getElementsByClassName("cta-contact")[0].innerHTML = "Loading ..."
-      event.preventDefault();
-
-      const email = document.getElementsByName("email")[0].value;
-      const message = document.getElementsByName("message")[0].value;
-      const name = document.getElementsByName("name")[0].value;
-      var p = {
-        name: name,
-        email: email,
-        message: message
+      function showSuccessMessage() {
+        const successMessage = document.getElementById("success-message");
+        successMessage.innerHTML =
+          '<div class="alert alert-success">Message sent successfully!</div>';
       }
-      //console.log(p.toString())
-      try {
-        const response = await fetch("https://be-semarang-4-production.up.railway.app/contact", {
-          method: "POST",
-          body: JSON.stringify(p),
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
 
-        if (response.ok) {
-          showSuccessMessage();
-        } else {
-          // Handle the error case here
-          console.error('Failed to submit the form');
+      const contactForm = document.querySelector("form");
+
+      contactForm.addEventListener("submit", async (event) => {
+        document.getElementById("success-message").style.display = "none";
+        document.getElementsByClassName("cta-contact")[0].disabled = true;
+        document.getElementsByClassName("cta-contact")[0].innerHTML =
+          "Loading ...";
+        event.preventDefault();
+
+        const email = document.getElementsByName("email")[0].value;
+        const message = document.getElementsByName("message")[0].value;
+        const name = document.getElementsByName("name")[0].value;
+        var p = {
+          name: name,
+          email: email,
+          message: message,
+        };
+        //console.log(p.toString())
+        try {
+          const response = await fetch(
+            "https://be-semarang-4-production.up.railway.app/contact",
+            {
+              method: "POST",
+              body: JSON.stringify(p),
+              headers: {
+                "Content-Type": "application/json",
+              },
+            }
+          );
+
+          if (response.ok) {
+            showSuccessMessage();
+          } else {
+            // Handle the error case here
+            console.error("Failed to submit the form");
+          }
+        } catch (error) {
+          console.error("Error submitting the form:", error);
         }
-      } catch (error) {
-        console.error('Error submitting the form:', error);
-      }
-      document.getElementsByClassName("cta-contact")[0].disabled = false;
-      document.getElementsByClassName("cta-contact")[0].innerHTML = "Send"
-      document.getElementById('success-message').style.display = 'block';
-
-    });
+        document.getElementsByClassName("cta-contact")[0].disabled = false;
+        document.getElementsByClassName("cta-contact")[0].innerHTML = "Send";
+        document.getElementById("success-message").style.display = "block";
+      });
     </script>
     <!--My Javascript-->
     <script src="./js/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
