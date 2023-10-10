@@ -60,6 +60,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Item deleted successfully
                 // Remove the cart product element from the DOM
                 productElement.remove();
+                totalPrice -= product.itemPrice * product.quantity;
+                totalItem -= product.quantity;
+                cartSummary(totalItem, totalPrice);
               } else {
                 // Handle error if the item could not be deleted
                 console.error("Error deleting item from cart");
