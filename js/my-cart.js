@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         productElement.querySelector(
           ".my-cart-price"
         ).textContent = `Rp ${product.itemPrice},00`;
-        totalPrice += product.itemPrice;
+        totalPrice += product.itemPrice * product.quantity;
         console.log(totalPrice);
 
         //Delete button
